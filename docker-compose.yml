@@ -1,0 +1,28 @@
+version: '2'
+
+services: 
+  rediscon:
+    image: redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - /redis/data:/data
+  mongodb:
+    image: mongo
+    ports: 
+      - '27017:27017'
+    volumes: 
+      - /data/mongodb/db:/data/db
+   
+  nodeapp: 
+    build: 
+      context: .
+      dockerfile: node.Dockerfile
+    image: nodeapp
+    ports: 
+      - '3000:3000'
+      - '2000:2000'
+    volumes:
+      - ./:/opt/app 
+  
+                                                                                                           

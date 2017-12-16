@@ -1,0 +1,28 @@
+{
+  "name": "vagrant",
+  "version": "1.0.0",
+  "description": "a book application",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha server/*js --exit",
+    "start": "node index.js"
+  },
+  "author": "oyin",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.17.2",
+    "chai": "^4.0.0",
+    "cors": "^2.8.3",
+    "express": "^4.15.3",
+    "jsonwebtoken": "^7.4.1",
+    "morgan": "^1.8.2",
+    "redis": "^2.8.0",
+    "supertest": "^3.0.0"
+  },
+  "devDependencies": {
+    "express-jwt": "^5.3.0",
+    "mocha": "^4.0.1",
+    "mongoose": "^4.13.7"
+  }
+}
